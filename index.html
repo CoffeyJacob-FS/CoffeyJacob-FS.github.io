@@ -2,27 +2,103 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Car Inspo</title>
-    <link rel="stylesheet" href="Stylesheet.css">
+    <title>Carsperation</title>
+    <link rel="stylesheet" type="text/css"  href="Stylesheet.css">
     <script src="main.js"></script>
 </head>
 <body>
-<h1>Reasoning</h1>
-<p>No car build is made in a vacuum and while you want to be unique your going to pull inspiration from other builds.
-    This is a collection of some of my favorite cars both aftermarket and stock. </p>
 
-<h1>Images</h1>
-<img src="Images/Miata-Classic.png" alt="Miata">
-<h2>Mazda Miata </h2>
-<img src="Images/RX-7-classic.jpg" alt="RX-7">
-<h2> Mazda RX-7</h2>
-<img src="Images/WRX.jpg" alt="WRX">
-<h2>Subaru WRX</h2>
-<img src="Images/Nissan300z.jpg" alt="Nissan300zx">
-<h2>Nissan 300zx</h2>
-<img src="Images/ViperACR.jpg" alt="ViperACR">
-<h2>Dodge Viper ACR</h2>
-<img src="Images/Grom.jpg" alt="Grom">
-<h2>Honda Grom</h2>
+<h1>Carsperation</h1>
+<p>No car build is made in a vacuum and while you want to be unique your going to pull inspiration from other builds.
+    This is a collection of some of my favorite cars both aftermarket and stock. It used to be that we would have posters
+    and magazines to use for inspiration but now theres one simple place to go to look for inspiration for your next build.
+    You can also solve those late night arguments about what would beat what with the race function!</p>
+
+<div class="pictures">
+
+    <div class="picture Miata" picture-caption="Mazda Miata" >
+        <img src="Images/Miata-Classic.png" alt="Miata">
+    </div>
+
+
+    <div class="picture RX7" picture-caption="Mazda RX-7">
+        <img src="Images/RX-7-classic.jpg" alt="RX-7">
+    </div>
+
+
+    <div class="picture WRX" picture-caption="Subaru WRX">
+        <img src="Images/WRX.jpg" alt="WRX">
+    </div>
+
+    <div class="picture Z" picture-caption="Nissan 300z">
+        <img src="Images/Nissan300z.jpg" alt="Nissan300zx">
+    </div>
+
+    <div class="picture Viper" picture-caption="Dodge Viper">
+        <img src="Images/ViperACR.jpg" alt="ViperACR">
+    </div>
+
+    <div class="picture Grom" picture-caption="Honda Grom">
+        <img src="Images/Grom.jpg" alt="Grom">
+    </div>
+
+    <div class="picture BRZ" picture-caption="Subaru BRZ">
+        <img src="Images/BRZ.jpg" alt="BRZ">
+
+    </div>
+
+    <div class="picture R34" picture-caption="Nissan GTR R34">
+        <img src="Images/r34.jpg" alt="r34">
+    </div>
+    <div class="picture s2000" picture-caption="Honda S2000">
+        <img src="Images/S2000.jpg" alt="S2000">
+    </div>
+
+
+</div>
+<img src="Images/race.png" alt="Lets Race!">
+<p id="raceWinner"></p>
+<H3 >Choose two cars to race head to head </H3>
+<div class="racerSelect">
+<form >
+    <label> Racer 1 </label>
+    <select id="Racer1">
+        <option value = "BRZ"> BRZ</option>
+        <option value = "Grom"> Grom</option>
+        <option value = "Miata"> Miata</option>
+        <option value = "300Z"> 300Z</option>
+        <option value = "r34"> r34</option>
+        <option value = "RX7"> RX-7</option>
+        <option value = "s2000"> s2000</option>
+        <option value = "Viper"> Viper</option>
+        <option value = "Golf"> Golf</option>
+        <option value = "WRX"> WRX</option>
+    </select>
+</form>
+    <form >
+        <label> Racer 2 </label>
+        <select id="Racer2">
+            <option value = "BRZ"> BRZ</option>
+            <option value = "Grom"> Grom</option>
+            <option value = "Miata"> Miata</option>
+            <option value = "300Z"> 300Z</option>
+            <option value = "r34"> r34</option>
+            <option value = "RX7"> RX-7</option>
+            <option value = "s2000"> s2000</option>
+            <option value = "Viper"> Viper</option>
+            <option value = "Golf"> Golf</option>
+            <option value = "WRX"> WRX</option>
+        </select>
+</form>
+    <div class="RaceButton">
+        <button id="RaceB">Race!</button>
+    </div>
+
+</div>
+
+
+
+
+
 </body>
 </html>
