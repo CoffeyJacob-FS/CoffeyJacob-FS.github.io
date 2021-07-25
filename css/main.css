@@ -223,12 +223,15 @@ body>section::after{
     text-align: left;
     font-size: 6rem;
 }
-#featured img{
-    height: 2rem;
-    width: 2rem;
+
+
+#featured li {
+    text-align:center;
+
+    height: 5rem;
+    border-top: .1rem solid #555;
+
 }
-
-
 #featured li:nth-child(3){
     border-bottom: .1rem solid #555;;
 }
