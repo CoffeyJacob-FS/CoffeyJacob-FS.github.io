@@ -1,0 +1,321 @@
+/* Google Fonts ======================== */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap');
+/* CSS Reset =========================== */
+body, nav, section, footer, article, h1, h2, h3, p, a, time, ul, li, dl, dt, dd {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 100%;
+    text-decoration: none;
+    font-weight: normal;
+    color: inherit;
+    box-sizing: border-box;
+}
+/*TYPOGRAPHY*/
+html{
+    font-size: 62.5%;
+}
+body{
+    font-size: 1.4rem;
+
+    font-family: "lato", sans-serif;
+
+}
+
+
+h1,h2{
+
+    font-family: "lato",sans-serif;
+
+}
+h1 {
+    font-size: 3rem;
+    padding-left: 6rem;
+    color: #eeeeee;
+
+}
+h2{
+    font-size: 7rem;
+    padding-top: 7rem;
+    text-align: center;
+    font-weight: lighter;
+
+}
+
+img{
+
+    display: block;
+    background: rgba(255,255,255,.1);
+
+}
+body>section::after{
+    content:"";
+    display: block;
+    clear: both;
+}
+/*nav*/
+#headnav{
+    background: #2e3031;
+    padding: 2rem;
+    vertical-align: center;
+     height: 8rem;
+    margin: auto;
+}
+#headnav li{
+    position: relative;
+    top:-2.5rem;
+}
+#headnav li a {
+    float: right;
+    padding: .5rem 1rem;
+    color: #eee;
+    font-size: 2rem;
+
+}
+#headnav img{
+    display: block;
+    width: 5rem;
+    max-height: 5rem;
+    float: left;
+    position: relative;
+    top: -1rem;
+    background-color: transparent;
+
+}
+/*Page Content*/
+
+/*capabilities*/
+#Capabilities{
+    display: inline-block;
+    background-color: #4C4E50;
+    color: #eeeeee;
+    text-align: center;
+    margin: auto;
+    height: auto;
+
+}
+
+
+#Capabilities span{
+    font-weight: bold;
+
+}
+
+#Capabilities p{
+    padding-bottom: 2rem;
+
+    text-align: left;
+    margin: 2rem 30rem 0 10rem;
+
+}
+#ReadMore{
+
+    background-color: #EA202E;
+    border: none;
+    color: #eeeeee;
+    padding: 1.5rem 3.2rem;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1.6rem;
+    margin-bottom: 5rem;
+    margin-left: -92.5rem;
+    margin-top: -5.5rem;
+
+
+
+
+}
+#Capabilities img{
+    float: left;
+    max-height: 20rem;
+    min-height: 20rem;
+   margin-left: 40rem;
+    margin-right: 2.5rem;
+}
+
+/*what we offer*/
+#WhatWeOffer  {
+    background-color: #EA202E;
+    color: #eeeeee;
+    margin: auto;
+    height: auto;
+
+
+}
+#WhatWeOffer span{
+    font-weight: bold;
+
+}
+#offer{
+    height: 30rem;
+    width: 40rem;
+    margin-left: 40rem;
+
+
+}
+
+
+
+#WhatWeOffer li h3{
+    text-align: center;
+    padding: 2rem;
+
+}
+#WhatWeOffer li img{
+    display: inline-block;
+    background: none;
+    margin-left: 5rem;
+}
+
+#WhatWeOffer li p{
+    text-align: center;
+    margin-top: .5rem;
+
+}
+#levels{
+    margin-left: 40rem;
+}
+#levels li  {
+
+    float: left;
+    width: 20rem;
+    padding: 2rem 2rem;
+
+}
+/*Featured*/
+#featured{
+    height: auto;
+}
+#featured span{
+    font-weight: bold;
+
+}
+#featured p {
+    text-align: left;
+    margin: 0 50rem 0 20rem;
+
+}
+#featured ul {
+
+    list-style-type: none;
+    padding: 0;
+    width: 20rem;
+    background-color: #f1f1f1;
+    margin: 0 0 2rem 30rem;
+    float: left;
+
+
+
+
+}
+#label{
+    font-size: 3rem;
+    font-weight: bold;
+    padding-bottom: 1rem;
+    padding-right: 57rem;
+}
+#featured h2{
+
+    padding-bottom: 6rem;
+}
+#featured h3{
+    text-align: left;
+    font-size: 6rem;
+}
+#featured img{
+    height: 2rem;
+    width: 2rem;
+}
+
+
+#featured li:nth-child(3){
+    border-bottom: .1rem solid #555;;
+}
+/*advice*/
+#Advice{
+    background-color: #2e3031;
+    color: #eeeeee;
+    margin: auto;
+    height: auto;
+
+}
+#Advice span{
+    font-weight: bold;
+
+}
+
+
+#p2{
+
+    margin-left: 50rem;
+    margin-top: 10rem;
+
+
+
+}
+#Advice p:nth-of-type(1){
+margin-right: 40rem;
+}
+#Advice img{
+
+    max-height: 20rem;
+
+}
+#Tips1{
+    float: left;
+    margin-left: 50rem;
+}
+#Tips2{
+    float: right;
+    margin-top: 10rem;
+    margin-right: 40rem;
+    margin-bottom: 2rem;
+}
+
+
+
+/*tips*/
+#tips{
+    background-color: #C22A36;
+    color: #eeeeee;
+    text-align: center;
+    margin: auto;
+    height: auto;
+}
+#tips span{
+    font-weight: bold;
+
+}
+#tips p{
+    margin: 2rem 40rem;
+    padding-bottom: 2rem;
+}
+
+/*footer*/
+#footer{
+    text-align: center;
+    margin: auto;
+    height: 20rem;
+
+}
+#footer ul{
+    margin-top:10rem;
+}
+#footer li {
+
+    padding: 2rem;
+    display: inline-block;
+
+
+}
+#fb{
+    height: 12.8rem;
+    width: 12.8rem;
+    color: #eeeeee;
+}
+
+
+
+
+
