@@ -48,6 +48,11 @@ img{
     background: rgba(255,255,255,.1);
 
 }
+div.Constraints{
+    max-width: 145rem;
+    margin: 0 auto;
+
+}
 body>section::after{
     content:"";
     display: block;
@@ -60,13 +65,20 @@ body>section::after{
     vertical-align: center;
      height: 8rem;
     margin: auto;
+
+}
+#headnav ul{
+    float: right;
 }
 #headnav li{
+    float: left;
     position: relative;
     top:-2.5rem;
+
+
 }
 #headnav li a {
-    float: right;
+
     padding: .5rem 1rem;
     color: #eee;
     font-size: 2rem;
@@ -86,13 +98,16 @@ body>section::after{
 
 /*capabilities*/
 #Capabilities{
-    display: inline-block;
+
     background-color: #4C4E50;
     color: #eeeeee;
     text-align: center;
     margin: auto;
     height: auto;
 
+}
+#Capabilities h2{
+    margin-bottom: 2rem;
 }
 
 
@@ -103,9 +118,9 @@ body>section::after{
 
 #Capabilities p{
     padding-bottom: 2rem;
-
-    text-align: left;
+     text-align: left;
     margin: 2rem 30rem 0 10rem;
+
 
 }
 #ReadMore{
@@ -116,21 +131,31 @@ body>section::after{
     padding: 1.5rem 3.2rem;
     text-align: center;
     text-decoration: none;
-    display: inline-block;
     font-size: 1.6rem;
     margin-bottom: 5rem;
-    margin-left: -92.5rem;
-    margin-top: -5.5rem;
+    float: left;
+    text-transform: uppercase;
 
+}
+#ReadMore:not(.disabled):hover {
 
+    background-color: #2e3031;
+}
 
+#ReadMore:not(.disabled):active {
 
+    background-color: #2e3031;
+}
+#ReadMore:after{
+    content:"";
+    display: block;
+    clear: both;
 }
 #Capabilities img{
     float: left;
-    max-height: 20rem;
-    min-height: 20rem;
-   margin-left: 40rem;
+    max-height: 30rem;
+    margin-bottom: 2rem;
+   margin-left: 20rem;
     margin-right: 2.5rem;
 }
 
@@ -147,12 +172,10 @@ body>section::after{
     font-weight: bold;
 
 }
-#offer{
+#WhatWeOffer img{
     height: 30rem;
     width: 40rem;
-    margin-left: 40rem;
-
-
+    margin-bottom: 2rem;
 }
 
 
@@ -160,10 +183,11 @@ body>section::after{
 #WhatWeOffer li h3{
     text-align: center;
     padding: 2rem;
+    margin-top: 2rem;
 
 }
 #WhatWeOffer li img{
-    display: inline-block;
+
     background: none;
     margin-left: 5rem;
 }
@@ -173,16 +197,38 @@ body>section::after{
     margin-top: .5rem;
 
 }
-#levels{
-    margin-left: 40rem;
-}
+
 #levels li  {
 
     float: left;
     width: 20rem;
     padding: 2rem 2rem;
 
+
 }
+#levels li:nth-of-type(1){
+    background-image: url("/images/offer1.png");
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+#levels li:nth-of-type(2){
+    background-image: url("/images/offer2.png");
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+#levels li:nth-of-type(3){
+    background-image: url("/images/offer3.png");
+    background-repeat: no-repeat;
+    background-position: top;
+
+}
+#levels{
+margin-left: 20rem;
+}
+
+
 /*Featured*/
 #featured{
     height: auto;
@@ -190,10 +236,10 @@ body>section::after{
 #featured span{
     font-weight: bold;
 
+
 }
 #featured p {
     text-align: left;
-    margin: 0 50rem 0 20rem;
 
 }
 #featured ul {
@@ -202,26 +248,26 @@ body>section::after{
     padding: 0;
     width: 20rem;
     background-color: #f1f1f1;
-    margin: 0 0 2rem 30rem;
+    margin: 0 5rem 2rem 10rem;
     float: left;
-
-
-
 
 }
 #label{
     font-size: 3rem;
     font-weight: bold;
     padding-bottom: 1rem;
-    padding-right: 57rem;
+    padding-right: 75rem;
 }
+
+
+
 #featured h2{
 
     padding-bottom: 6rem;
 }
 #featured h3{
     text-align: left;
-    font-size: 6rem;
+    font-size: 3rem;
 }
 
 
@@ -235,9 +281,11 @@ body>section::after{
 #featured li:nth-child(3){
     border-bottom: .1rem solid #555;;
 }
+
 /*advice*/
 #Advice{
-    background-color: #2e3031;
+    background-image: url("/images/Tips.jpg");
+    background-position: center;
     color: #eeeeee;
     margin: auto;
     height: auto;
@@ -248,28 +296,26 @@ body>section::after{
 
 }
 
-
-#p2{
-
-    margin-left: 50rem;
-    margin-top: 10rem;
-
-
+#Advice p:nth-of-type(1){
+    margin-right: 30rem;
 
 }
-#Advice p:nth-of-type(1){
-margin-right: 40rem;
+#Advice p:nth-of-type(2){
+    margin-left: 50rem;
+    margin-top: 10rem;
 }
 #Advice img{
 
     max-height: 20rem;
 
 }
-#Tips1{
+
+#Advice img:nth-of-type(1){
     float: left;
     margin-left: 50rem;
+    margin-right: 2rem;
 }
-#Tips2{
+#Advice img:nth-of-type(2){
     float: right;
     margin-top: 10rem;
     margin-right: 40rem;
@@ -285,38 +331,187 @@ margin-right: 40rem;
     text-align: center;
     margin: auto;
     height: auto;
+
 }
 #tips span{
     font-weight: bold;
 
 }
 #tips p{
-    margin: 2rem 40rem;
-    padding-bottom: 2rem;
+   padding-bottom: 2rem;
+
 }
 
 /*footer*/
 #footer{
     text-align: center;
     margin: auto;
-    height: 20rem;
+    height: 50rem;
+    background-image: url("../images/Footer.jpg");
+    background-repeat: no-repeat;
+    color: #eeeeee;
+
 
 }
 #footer ul{
-    margin-top:10rem;
+    padding-top: 20rem;
+    margin-left: 75rem;
+    padding-bottom: 3rem;
+
+
 }
+
 #footer li {
 
+    float: left;
     padding: 2rem;
-    display: inline-block;
+    margin-left: 2rem;
 
 
 }
-#fb{
+#footer ul:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#footer li:nth-of-type(1){
+    background-image: url("../images/facebook.png");
+    background-position: center;
     height: 12.8rem;
     width: 12.8rem;
-    color: #eeeeee;
+    color: transparent;
+
 }
+#footer li:nth-of-type(2){
+    background-image: url("../images/twitter.png");
+    background-position: center;
+    height: 12.8rem;
+    width: 12.8rem;
+    color: transparent;
+
+
+}
+
+/*Contact page*/
+#Contact{
+
+    background-color: #4C4E50;
+    color: #eee;
+}
+
+#Form h2{
+    text-align: left;
+    padding-left: 5rem;
+    margin-bottom: 2rem;
+}
+#Contact h3{
+    font-size: 2rem;
+}
+#Info h2{
+    text-align: left;
+    margin-bottom: 2rem;
+
+}
+#Contact h3:nth-of-type(1){
+
+}
+#Contact h3:nth-of-type(2){
+    margin-bottom: .3rem;
+}
+#Contactlist ul{
+    margin-bottom: 2rem;
+}
+#Contactlist ul:nth-of-type(1){
+    float: left;
+ padding-right: 3rem;
+}
+#Contactlist:after{
+    content:"";
+    display: block;
+    clear: both;
+}
+#Form{
+
+float: left;
+margin-left: 40rem;
+}
+/*contact info
+
+ */
+label:not(.error) {
+    display: none;
+}
+input, textarea {
+    width: 100%;
+    background-color:#656769 ;
+    margin-bottom: 2.5rem;
+    font-size: 1.7rem;
+    font-weight: 700;
+    color: #eeeeee;
+    padding: 1rem 0 1rem 2rem;
+    font-family: "lato", sans-serif;
+    border: none;
+}
+input:focus, textarea:focus {
+    border-bottom: 1px solid #eeeeee;
+}
+input::placeholder, textarea::placeholder {
+    color: #eeeeee;
+    font-weight: 400;
+}
+textarea {
+    height: 15rem;
+    width: calc(100%/2 - 1rem);
+}
+
+
+#Info{
+    overflow: hidden;
+    padding-left: 10rem;
+}
+#contactinfo {
+    padding: 0 0 2rem 0;
+    border: none;
+}
+
+#contactinfo div:nth-of-type(1) {
+    width: calc(100%/2 - 1rem);
+    float: left;
+    border: none;
+}
+
+#contactinfo div:nth-of-type(2) {
+    width: calc(100%/2 - 1rem);
+
+}
+#contactinfo div:nth-of-type(3) {
+    width: calc(100%/2 - 1rem);
+
+}
+button[type='submit'] {
+    display: block;
+    height: 7rem;
+    width: 15rem;
+    padding: 1rem;
+    background: #4C4E50;
+    border: .2rem solid #eee;
+    color: #eee;
+    text-transform: uppercase;
+    font-weight: 900;
+    cursor: pointer;
+
+}
+
+button[type='submit']:not(.disabled):hover {
+    border: none;
+    background-color: #C22A36;
+}
+
+button[type='submit']:not(.disabled):active {
+    border: none;
+    background-color: #C22A36;
+}
+
 
 
 
