@@ -35,6 +35,8 @@ margin-top: 0;
 .card{
     border:.2rem black solid;
     border-radius: 1rem;
+    margin: 1rem;
+
 }
 .areahead{
     margin: 1rem;;
@@ -85,4 +87,24 @@ a{
 }
 .display-3{
     color: #6290c3;
+}
+@media(min-width:0px){
+    .risklevellable{
+        font-size: 2rem;
+        padding-left: 0;
+    }
+}
+@media(min-width:500px){
+    .w-10{
+        width: 0;
+    }
+    .newcasses{
+        padding-left: 0;
+    }
+}
+@media(min-width:800px){
+    .risklevellable{
+        font-size: 4rem;
+      
+    }
 }
