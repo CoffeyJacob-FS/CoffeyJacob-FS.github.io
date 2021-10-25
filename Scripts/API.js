@@ -116,7 +116,7 @@ class Api{
         else if (metric> 30/100*jsondata.actuals.icuBeds.capacity){
             document.querySelector(htmlclass).style.color=ok;
         }
-        else if (metric>= 75/100*jsondata.iactuals.cuBeds.capacity){
+        else if (metric>= 75/100*jsondata.actuals.icuBeds.capacity){
             document.querySelector(htmlclass).style.color=bad;
         }
 
