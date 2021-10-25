@@ -5,8 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="/Style/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="/Style/bootstrap-grid.min.css">
     <link rel="stylesheet" href="/Style/bootstrap.min.css">
@@ -36,28 +36,28 @@
       <div class="card totalcases" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title">Total Cases</h4>
-        <p class="card-text countycases">Number</p>
+        <p class="card-text countycases">Select a county</p>
       </div>
     </div>
     <div class="card totaldeaths" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title">Total Deaths</h4>
-        <p class="card-text countydeaths">Number</p>
+        <p class="card-text countydeaths">Select a county</p>
       </div>
     </div>
-    <h3 class="risklevellable">Overall Risk Level: <span class="countyrisklevel">Level</span></h3>
+    <h3 class="risklevellable">Overall Risk Level: <span class="countyrisklevel">Select a county</span></h3>
     </div>
     <div class="row">
       <div class="card positivetests" style="width: 12rem;">
       <div class="card-body ">
         <h4 class="card-title">Positive Tests</h4>
-        <p class="card-text countyptests">Number</p>
+        <p class="card-text countyptests">Select a county</p>
       </div>
     </div>
     <div class="card negativetest" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title ">Negative Tests</h4>
-        <p class="card-text countyntests">Number</p>
+        <p class="card-text countyntests">Select a county</p>
       </div>
     </div>
     
@@ -65,39 +65,39 @@
       <div class="card newcases " style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title ">New Cases</h4>
-        <p class="card-text countyncases">Number</p>
+        <p class="card-text countyncases">Select a county</p>
       </div>
     </div>
     <div class="card newdeaths" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title ">New Deaths</h4>
-        <p class="card-text countyndeaths">Number</p>
+        <p class="card-text countyndeaths">Select a county</p>
       </div>
     </div>
     <div class="w-10"></div>
     <div class="card hospitalbeds" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title ">Hospital Beds</h4>
-        <p class="card-text countyhospital">Number</p>
+        <p class="card-text countyhospital">Select a county</p>
       </div>
      </div>
      <div class="card icubeds" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title ">ICU Beds</h4>
-        <p class="card-text countyicu">Number</p>
+        <p class="card-text countyicu">Select a county</p>
       </div>
      </div>
      <div class="w-10"></div>
       <div class="card vaccines" style="width: 12rem;">
       <div class="card-body  ">
         <h4 class="card-title ">Vaccines given</h4>
-        <p class="card-text countyvacc">Number</p>
+        <p class="card-text countyvacc">Select a county</p>
       </div>
      </div>
      
    
     </div>
-
+    <button type="button" class="btn moreinfo" data-toggle="modal" data-target="#exampleModal"></button>
 
 </div> 
   
@@ -250,13 +250,118 @@
      
    
     </div>
-
+    
 
 </div> 
   
   </section>
   <!-- Modal -->
-
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Covid Statistics</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <select class="modalselect">
+            <option value="39001">Adams</option>
+            <option value="39003">Allen</option>
+            <option value="39005">Ashland</option>
+            <option value="39007">Ashtabula</option>
+            <option value="39009">Athens</option>
+            <option value="39011">Auglaize</option>
+            <option value="39013">Belmont</option>
+            <option value="39015">Brown</option>
+            <option value="39017">Butler</option>
+            <option value="39019">Carroll</option>
+            <option value="39021">Champaign</option>
+            <option value="39023">Clark</option>
+            <option value="39025">Clermont</option>
+            <option value="39027">Clinton</option>
+            <option value="39029">Columbiana</option>
+            <option value="39031">Coshocton</option>
+            <option value="39033">Crawford</option>
+            <option value="39035" >Cuyahoga</option>
+            <option value="39037">Darke</option>
+            <option value="39039">Defiance</option>
+            <option value="39041">Delaware</option>
+            <option value="39043">Erie</option>
+            <option value="39045">Fairfield</option>
+            <option value="39047">Fayette</option>
+            <option value="39049">Franklin</option>
+            <option value="39051">Fulton</option>
+            <option value="39053">Gallia</option>
+            <option value="39055">Geauga</option>
+            <option value="39057">Greene</option>
+            <option value="39059">Guernsey</option>
+            <option value="39061">Hamilton</option>
+            <option value="39063">Hancock</option>
+            <option value="39065">Hardin</option>
+            <option value="39067">Harrison</option>
+            <option value="39069">Henry</option>
+            <option value="39071">Highland</option>
+            <option value="39073">Hocking</option>
+            <option value="39077">Huron</option>
+            <option value="39079">Jackson</option>
+            <option value="39081">Jefferson</option>
+            <option value="39083">Knox</option>
+            <option value="39085">Lake</option>
+            <option value="39087">Lawrence</option>
+            <option value="39089">Licking</option>
+            <option value="39091">Logan</option>
+            <option value="39093">Lorain</option>
+            <option value="39095">Lucas</option>
+            <option value="39097">Madison</option>
+            <option value="39099">Mahoning</option>
+            <option value="39101">Marion</option>
+            <option value="39103">Medina</option>
+            <option value="39105">Meigs</option>
+            <option value="39107">Mercer</option>
+            <option value="39109">Miami</option>
+            <option value="39111">Monroe</option>
+            <option value="39113">Montgomery</option>
+            <option value="39115">Morgan</option>
+            <option value="39117">Morrow</option>
+            <option value="39119">Muskingum</option>
+            <option value="39121">Noble</option>
+            <option value="39123">Ottawa</option>
+            <option value="39125">Paulding</option>
+            <option value="39127">Perry</option>
+            <option value="39129">Pickaway</option>
+            <option value="39131">Pike</option>
+            <option value="39133">Portage</option>
+            <option value="39135">Preble</option>
+            <option value="39137">Putnam</option>
+            <option value="39139">Richland</option>
+            <option value="39141">Ross</option>
+            <option value="39143">Sandusky</option>
+            <option value="39145">Scioto</option>
+            <option value="39147">Senecav
+            <option value="39149">Shelby</option>
+            <option value="39151">Stark</option>
+            <option value="39153">Summit</option>
+            <option value="39155">Trumbull</option>
+            <option value="39157">Tuscarawas</option>
+            <option value="39159">Union</option>
+            <option value="39161">Van Wert</option>
+            <option value="39163">Vinton</option>
+            <option value="39165">Warren</option>
+            <option value="39167">Washington</option>
+            <option value="39169">Wayne</option>
+            <option value="39171">Williams</option>
+            <option value="39173">Wood</option>
+            <option value="39175">Wyandot</option>
+          </select>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary submit" data-dismiss="modal">See Stats</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
 </main>
 
@@ -277,5 +382,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
     <script src="/Scripts/data.js" defer></script>
     <script src="/Scripts/main.js" defer></script>
+    <script src="/Scripts/API.js" defer></script>
   </body>
 </html>
