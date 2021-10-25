@@ -1,10 +1,14 @@
 class App {
     constructor() {
         let run= new getinfo();
+        let api=new pullApi();
+        
     }
     static getInstance() {
         if (!App._instance) {
             App._instance = new App();
+
+
             return App._instance;
         } else {
             throw "Sorry only one instance of 'App' can be made, please end previous process before starting a new one."
@@ -18,27 +22,7 @@ class getinfo{
         let ok="#F7c548";
         let bad="#B10f2e";
         //County
-        document.querySelector(".county").innerHTML= data.County[0].county+" County Covid-19 Statistics";
-        document.querySelector(".countycases").innerHTML=data.County[0].totalCases;
-        document.querySelector(".countycases").style.color=bad;
-        document.querySelector(".countydeaths").innerHTML=data.County[0].totalDeaths;
-        document.querySelector(".countydeaths").style.color=ok;
-        document.querySelector(".countyrisklevel").innerHTML=data.County[0].riskLevel;
-        document.querySelector(".countyrisklevel").style.color=good;
-        document.querySelector(".countyptests").innerHTML=data.County[0].positiveTests;
-        document.querySelector(".countyptests").style.color=good;
-        document.querySelector(".countyntests").innerHTML=data.County[0].negativeTests;
-        document.querySelector(".countyntests").style.color=good;
-        document.querySelector(".countyncases").innerHTML=data.County[0].ncases;
-        document.querySelector(".countyncases").style.color=good;
-        document.querySelector(".countyndeaths").innerHTML=data.County[0].ndeaths;
-        document.querySelector(".countyndeaths").style.color=ok;
-        document.querySelector(".countyhospital").innerHTML=data.County[0].hbeds;
-        document.querySelector(".countyhospital").style.color=ok;
-        document.querySelector(".countyicu").innerHTML=data.County[0].ibeds;
-        document.querySelector(".countyicu").style.color=bad;
-        document.querySelector(".countyvacc").innerHTML=data.County[0].vaccines;
-        document.querySelector(".countyvacc").style.color=good;
+            
         //State
         document.querySelector(".state").innerHTML= data.State[0].state+" Covid-19 Statistics";
         document.querySelector(".statecases").innerHTML=data.State[0].totalCases;
@@ -84,7 +68,18 @@ class getinfo{
         document.querySelector(".usvacc").style.color=ok;
 
     }
+    
+}
+class pullApi{
+    constructor(){
+        document.querySelector(".submit").addEventListener("click",e=>{
+        
+        let fips= document.querySelector(".modalselect").value;
+        Api.Connect(fips);
+        });
+    }
 }
 (() => {
     const app = App.getInstance();
+    
 })();
