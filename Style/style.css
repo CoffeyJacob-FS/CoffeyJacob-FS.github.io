@@ -80,10 +80,14 @@ footer{
     margin-top: 2rem;
     background-color:#6290c3;
     color: white;
+    z-index: 1;
+    position: relative;
 
 }
 a{
     color:white;
+    z-index: 1;
+    position: relative;
 }
 .display-3{
     color: #6290c3;
