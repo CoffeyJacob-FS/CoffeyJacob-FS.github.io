@@ -100,7 +100,7 @@ a{
         padding-left: 0;
     }
 }
-@media(min-width:500px){
+@media(min-width:420px){
     .w-10{
         width: 0;
     }
