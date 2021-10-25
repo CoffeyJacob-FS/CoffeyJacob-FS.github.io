@@ -1,7 +1,7 @@
-class Api{
+class Utils{
     constructor() {
     }
-    static Connect(fips){
+    static county(fips){
 
 
         const apiKey="aad72368172b4a9a846763308eaf6a11";
@@ -15,7 +15,7 @@ class Api{
                 responseasjson= JSON.parse(JSON.stringify(responseasjson, this.replacer)); 
 
                 console.log(responseasjson);
-                 this.Display(responseasjson);
+                 this.Displaycounty(responseasjson);
              })
 
 
@@ -24,6 +24,48 @@ class Api{
              })
 
     }
+    static state(){
+        const apiKey="aad72368172b4a9a846763308eaf6a11";
+        const Url = "https://api.covidactnow.org/v2/state/OH.json?apiKey="+apiKey;
+
+        
+        fetch(Url)
+             .then(response => response.json())
+             .then(responseasjson => {
+                
+                responseasjson= JSON.parse(JSON.stringify(responseasjson, this.replacer)); 
+
+                console.log(responseasjson);
+                 this.Displaystate(responseasjson);
+             })
+
+
+             .catch(error => {
+                 console.log("error:", error);
+             })
+
+    }
+    static us(){
+        const apiKey="aad72368172b4a9a846763308eaf6a11";
+        const Url = "https://api.covidactnow.org/v2/country/US.json?apiKey="+apiKey;
+
+        
+        fetch(Url)
+             .then(response => response.json())
+             .then(responseasjson => {
+                
+                responseasjson= JSON.parse(JSON.stringify(responseasjson, this.replacer)); 
+
+                console.log(responseasjson);
+                 this.DisplayUS(responseasjson);
+             })
+
+
+             .catch(error => {
+                 console.log("error:", error);
+             })
+    }
+
     static replacer(i, val) {
         if ( val === null ) 
         { 
@@ -34,10 +76,8 @@ class Api{
        }
     
     
-    static Display(jsondata){
-        let good="#31572c";
-        let ok="#F7c548";
-        let bad="#B10f2e";
+    static Displaycounty(jsondata){
+        
         
         document.querySelector(".county").innerHTML= jsondata.county+" County Covid-19 Statistics";
         document.querySelector(".countycases").innerHTML=jsondata.actuals.cases;
@@ -67,6 +107,65 @@ class Api{
         document.querySelector(".countyvacc").innerHTML=jsondata.actuals.vaccinesAdministered;
         this.colors(".countyvacc",jsondata,jsondata.actuals.vaccinesAdministered)
     }
+
+    static Displaystate(jsondata){
+        document.querySelector(".state").innerHTML= jsondata.state+" Covid-19 Statistics";
+        document.querySelector(".statecases").innerHTML=jsondata.actuals.cases;
+         this.colors(".statecases",jsondata,jsondata.actuals.cases)
+        document.querySelector(".statedeaths").innerHTML=jsondata.actuals.deaths;
+        this.colors(".statedeaths",jsondata,jsondata.actuals.deaths)
+        document.querySelector(".staterisklevel").innerHTML=jsondata.riskLevels.overall
+        this.riskcolor(".staterisklevel",jsondata.riskLevels.overall)
+        document.querySelector(".stateptests").innerHTML=jsondata.actuals.positiveTests;
+        this.colors(".stateptests",jsondata,jsondata.actuals.positiveTests)
+
+        document.querySelector(".statentests").innerHTML=jsondata.actuals.negativeTests;
+        this.colors(".statentests",jsondata,jsondata.actuals.negativeTests)
+
+        document.querySelector(".statencases").innerHTML=jsondata.actuals.newCases;
+        this.colors(".statencases",jsondata,jsondata.actuals.newCases)
+
+        document.querySelector(".statendeaths").innerHTML=jsondata.actuals.newDeaths;
+        this.colors(".statendeaths",jsondata,jsondata.actuals.newDeaths)
+
+        document.querySelector(".statehospital").innerHTML=jsondata.actuals.hospitalBeds.currentUsageCovid;
+        this.hbedcolors(".statehospital",jsondata,jsondata.actuals.hospitalBeds.currentUsageCovid)
+
+        document.querySelector(".stateicu").innerHTML=jsondata.actuals.icuBeds.currentUsageCovid;
+        this.ibedcolors(".stateicu",jsondata,jsondata.actuals.icuBeds.currentUsageCovid)
+
+        document.querySelector(".statevacc").innerHTML=jsondata.actuals.vaccinesAdministered;
+        this.colors(".statevacc",jsondata,jsondata.actuals.vaccinesAdministered)
+    }
+    static DisplayUS(jsondata){
+        document.querySelector(".uscases").innerHTML=jsondata.actuals.cases;
+         this.colors(".uscases",jsondata,jsondata.actuals.cases)
+        document.querySelector(".usdeaths").innerHTML=jsondata.actuals.deaths;
+        this.colors(".usdeaths",jsondata,jsondata.actuals.deaths)
+        document.querySelector(".usrisklevel").innerHTML=jsondata.riskLevels.overall
+        this.riskcolor(".usrisklevel",jsondata.riskLevels.overall)
+        document.querySelector(".usptests").innerHTML=jsondata.actuals.positiveTests;
+        this.colors(".usptests",jsondata,jsondata.actuals.positiveTests)
+
+        document.querySelector(".usntests").innerHTML=jsondata.actuals.negativeTests;
+        this.colors(".usntests",jsondata,jsondata.actuals.negativeTests)
+
+        document.querySelector(".usncases").innerHTML=jsondata.actuals.newCases;
+        this.colors(".usncases",jsondata,jsondata.actuals.newCases)
+
+        document.querySelector(".usndeaths").innerHTML=jsondata.actuals.newDeaths;
+        this.colors(".usndeaths",jsondata,jsondata.actuals.newDeaths)
+
+        document.querySelector(".ushospital").innerHTML=jsondata.actuals.hospitalBeds.currentUsageCovid;
+        this.hbedcolors(".ushospital",jsondata,jsondata.actuals.hospitalBeds.currentUsageCovid)
+
+        document.querySelector(".usicu").innerHTML=jsondata.actuals.icuBeds.currentUsageCovid;
+        this.ibedcolors(".usicu",jsondata,jsondata.actuals.icuBeds.currentUsageCovid)
+
+        document.querySelector(".usvacc").innerHTML=jsondata.actuals.vaccinesAdministered;
+        this.colors(".usvacc",jsondata,jsondata.actuals.vaccinesAdministered)
+    }
+
     static riskcolor(htmlclass,metric){
         let good="#31572c";
         let ok="#F7c548";
