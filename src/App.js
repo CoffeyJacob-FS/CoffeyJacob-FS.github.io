@@ -1,18 +1,25 @@
-import logo from './logo.svg';
+import { Routes, Route, } from "react-router-dom";
 import './App.css';
+import About from "./Pages/About";
+import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
+import Current from "./Pages/Current";
+import Landing from "./Pages/Landing";
+import Past from "./Pages/Past";
+
 
 function App() {
-  const token = 'BQB397QEccQpAEhlIIE-Cac8vKFexj1UACJbjsqONMnoCwLsNBHAqiDshRH3h61bv5VaN5ZTD-CsKCDp5w_nOT9Hpti7Zb0rXeo0ZU-6DRycZqN0tluA23TaVkW5iBIRbixtRWElyDdCWkKwnv5IP-ZWQ5ZKzhcNvsG8HQh0';
-    fetch('https://api.spotify.com/v1/me/player/recently-played', {
-        headers: {
-        Authorization: `Bearer BQB397QEccQpAEhlIIE-Cac8vKFexj1UACJbjsqONMnoCwLsNBHAqiDshRH3h61bv5VaN5ZTD-CsKCDp5w_nOT9Hpti7Zb0rXeo0ZU-6DRycZqN0tluA23TaVkW5iBIRbixtRWElyDdCWkKwnv5IP-ZWQ5ZKzhcNvsG8HQh0`
-        }
-        })
-    .then(res => res.json())
-    .then(json => console.log(json));
+    
   return (
     <div className="App">
-      
+    <Routes>
+        <Route exact path='/' element={<Landing/>}/>
+        <Route path="About" element={<About/>}/>
+        <Route path="Blog" element={<Blog/>}/>
+        <Route path="Contact" element={<Contact/>}/>
+        <Route path="Current" element={<Current/>}/>
+        <Route path="Past" element={<Past/>}/>
+      </Routes>
     </div>
   );
 }
