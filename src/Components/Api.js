@@ -1,4 +1,4 @@
-import react,{useState,useEffect} from "react";
+import {useState,useEffect} from "react";
 import axios from "axios";
 
 const Api =props=>{
@@ -16,7 +16,7 @@ if(photo){
     return(
         <div >
             <a href={photo.url}><img style={styles.pic} src={photo.hdurl} alt='nasa pic of the day'></img></a>
-            <p>Title: {photo.title}</p>
+            <p style={styles.title}>Title: {photo.title}</p>
             
         </div>
     )
@@ -30,6 +30,11 @@ export default Api;
 const styles={
     pic:{
         height:'200px',
-        width:"300px"
+        width:"300px",
+        margin:'0'
+    },
+    title:{
+        margin:'0'
     }
+
 }
