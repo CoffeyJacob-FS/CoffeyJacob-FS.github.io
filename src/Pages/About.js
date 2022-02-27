@@ -38,6 +38,8 @@ function About(){
                     </div>
                 </section>
                 </section>
+    
+
             </body>
         </html>
     )
@@ -94,5 +96,6 @@ const styles= {
     bottomtext:{
         display:'felx',
         flexDirection:'column',
-    }
+    },
+    
 }

@@ -6,6 +6,7 @@ return(
             <input style={Styles.email} type="text" id="email" name="email" placeholder="Email"></input>
             <input style={Styles.company} type="text" id="company" name="company" placeholder="Company"></input>
             <textarea style={Styles.message} type="textarea" id="message" name="message"  placeholder="Your message"></textarea>
+            <button className="button"style={Styles.button}>Send</button>
         </form>
     </section>
 
@@ -27,12 +28,12 @@ const Styles={
         padding:'10px'
     },
     name:{
-        width:'340px',
+        width:'335px',
         margin:'0 12px 5px 0',
         height:'30px',
     },
     email:{
-        width:'340px',
+        width:'335px',
         margin:'0  0 5px 12px',
         height:'30px',
     },
@@ -44,5 +45,14 @@ const Styles={
     message:{
         width:'705px',
         height:'100px'
+    },
+    button:{
+      backgroundColor:'#d458ca',
+      color:'#EAF4F4',
+      padding:'5px',
+      border:'none',
+      margin:'10px',
+      borderRadius:'3px',
+      cursor:'pointer'
     }
 }

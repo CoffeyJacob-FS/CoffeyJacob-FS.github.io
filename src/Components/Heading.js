@@ -6,7 +6,7 @@ import logo  from "../IMG/Temp.png"
 function Heading(props){
     return(
         <div style={styles.header}>
-           <NavLink style={styles.Contact} to="/"> <h1>Jake Coffey - Fullstack Developer</h1></NavLink>
+            <NavLink style={styles.Contact} to="/"> <h1>Jake Coffey - Fullstack Developer</h1></NavLink>
             <div style={styles.right}>  
                 <NavLink style={styles.Contact} to ="/contact" ><h2>Contact Me</h2></NavLink>
                 <img style={styles.logo} src={logo} alt="logo"></img>
@@ -25,6 +25,7 @@ const styles={
         justifyContent:'space-Between',
         padding:'0px 15px 0px 15px',
         borderBottom:'5px solid #EAF4F4'
+        
         
     },
     right:{

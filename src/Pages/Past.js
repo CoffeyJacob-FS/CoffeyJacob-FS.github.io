@@ -16,7 +16,7 @@ function Past(){
                 <SideBar></SideBar>
                 <section>
                     <div>
-                        <ul style={Styles.pageNav}>
+                        <ul className="sort" style={Styles.pageNav}>
                             <li>Backend</li>
                             <li>Front end</li>
                             <li>designs</li>
@@ -51,7 +51,9 @@ const Styles={
         padding:'0',
         height:'30px',
         alignItems:'center',
-        borderRadius:'20px'
+        borderRadius:'20px',
+        cursor:'pointer'
+
     },
 
 }

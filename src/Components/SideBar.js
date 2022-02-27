@@ -1,6 +1,8 @@
 import { ImTwitter,ImGithub,ImLinkedin,ImStackoverflow } from "react-icons/im";
-import { NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Api from "./Api";
+
+
 
 
 
@@ -9,9 +11,11 @@ const SideBar=props=>{
     return(
         
             <nav style={styles.Side}>
-                <NavLink className="hhgg" style={styles.navLinks}to="/About">About Me</NavLink>
-                <NavLink style={styles.navLinks} to="/Current">Current Projects</NavLink>
-                <NavLink style={styles.navLinks}to="/Past">Past Projects</NavLink>
+                <div style={styles.links}>
+                <Link className="icon" style={styles.navLinks}to="/About">About Me</Link>
+                <Link style={styles.navLinks} to="/Current">Current Projects</Link>
+                <Link style={styles.navLinks}to="/Past">Past Projects</Link>
+                </div>
                 <hr style={styles.bar}></hr>
                 <h2 style={styles.headings} >Socials:</h2>
         <ul style={styles.Socials}>
@@ -34,7 +38,7 @@ const styles={
         flexDirection:'column',
         width:'300px',
         height:'100vh',
-        padding:'100px 10px 10px 10px',
+        padding:'50px 10px 10px 10px',
         color:'#EAF4F4',
         borderRight:'5px solid #EAF4F4'
     },
@@ -62,6 +66,12 @@ const styles={
         backgroundColor:' #EAF4F4',
         height: '2px',
         width:'300px',
-        border:'none'
+        border:'none',
+        margin:'0px 0 0 0'
+    },
+    links:{
+        margin:'0 0 50px 0',
+        display:'flex',
+        flexDirection:'column',
     }
 }
