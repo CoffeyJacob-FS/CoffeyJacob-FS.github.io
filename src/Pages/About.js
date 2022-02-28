@@ -19,7 +19,7 @@ function About(){
                 <div style={styles.p1}>
                 <h2>Who am I</h2>
                 <p style={styles.p1Text}>
-                    My names Jake and im a full stack developer based out of cleveland ohio. I got my start in tech on the operations side with netwokring / systems administration
+                    My names Jake and im a full stack developer based out of cleveland ohio. I got my start in tech on the operations side with networking / systems administration
                     and then transitioned into more development based roles. This I feel give me an interesting perpective on web development and UX. Overall I'm a self starter that 
                     enjoys working in teams and I cant wait to hear from you about your project. 
                 </p>
